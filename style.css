@@ -1,0 +1,121 @@
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        outline: none;
+        text-decoration: none;
+        outline: none;
+        font-family: inherit;
+        font-weight: 400;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #5cdb94;
+        background-image: radial-gradient(circle, rgba(5, 56, 107, 1) 0%, rgba(55, 150, 131, 1) 35%, rgba(92, 219, 148, 1) 100%);
+    }
+    
+    ol,
+    ul,
+    li {
+        list-style: none;
+        display: block;
+    }
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    
+    a img {
+        border: none;
+    }
+    
+    button,
+    a {
+        cursor: pointer;
+        color: inherit;
+    }
+    
+    textarea {
+        resize: none;
+    }
+    
+    button,
+    input,
+    textarea,
+    select {
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        border-radius: 0;
+    }
+    
+    section {
+        min-height: 100vh;
+    }
+    
+    @keyframes welcomeAnim {
+        0% {
+            background-color: #05386B;
+            transform: rotate(0) scale(0.1);
+        }
+        100% {
+            background-color: #5cdb94;
+            transform: rotate(180deg) scale(1);
+        }
+    }
+    
+    section#welcome {
+        position: relative;
+        width: calc(100vh - 160px);
+        height: calc(100vh - 160px);
+        min-height: unset;
+        margin: 80px auto;
+        background-color: #5cdb94;
+        box-shadow: 0 0 20px #05386B;
+        border-radius: 10px;
+        animation-name: welcomeAnim;
+        animation-duration: 10s;
+    }
+    
+    @keyframes buttonAnim {
+        0% {
+            top: 0vh;
+            left: 0vw;
+            background-color: #edf5e1;
+            opacity: 0.5;
+        }
+        100% {
+            top: 40vh;
+            left: 20vw;
+            background-color: #05386B;
+            opacity: 1;
+        }
+    }
+    
+    section#welcome button {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        border: 4px solid #379683;
+        border-radius: 50%;
+        background-color: #05386B;
+        color: #5cdb94;
+        transform: translate(-50%, -50%);
+        transition: transform 1s;
+        text-transform: uppercase;
+        font-weight: 800;
+        animation-name: buttonAnim;
+        animation-duration: 5s;
+        animation-delay: 10s;
+        animation-fill-mode: forwards;
+    }
+    
+    section#welcome button:hover {
+        transform: translate(-50%, -50%) scale(1.2) rotate(360deg);
+    }
